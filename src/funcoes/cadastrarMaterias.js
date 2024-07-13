@@ -18,15 +18,15 @@ function cadastrarMaterias() {
 
     while (continuarExecutando) {
         let quantidadeMaterias = materias.length;
-        console.log(`\n${quantidadeMaterias} matérias adicionadas.`);
-        console.log("Deseja continuar adicionando matérias?");
+        console.log(`\n${quantidadeMaterias} matérias adicionadas.\n`);
+        console.log("Deseja continuar adicionando matérias?\n");
         let resposta = prompt("Digite 1 para sim, 2 para não: ");
 
         if (resposta == '1') {
             inserirMateria();
         } else {
-            console.log("Cadastro encerrado");
-            console.log("Próxima etapa");
+            console.log("\nCadastro de matérias encerrado.");
+            console.log("Próxima etapa.\n");
             continuarExecutando = false;
         }
     }
