@@ -26,7 +26,7 @@ function cadastrarMaterias() {
             inserirMateria();
         } else {
             console.log("\nCadastro de matérias encerrado.");
-            console.log("Próxima etapa.\n");
+            console.log("======== Próxima etapa ========\n");
             continuarExecutando = false;
         }
     }

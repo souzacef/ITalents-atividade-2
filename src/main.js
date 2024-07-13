@@ -1,20 +1,14 @@
-const prompt = require("prompt-sync")();
-
+const cadastrarAluno = require("./funcoes/cadastrarAluno");
 const { cadastrarMaterias, materias } = require("./funcoes/cadastrarMaterias");
-const cadastrarNotas = require("./funcoes/cadastrarNotas");
-const calcularMedia = require("./funcoes/calcularMedia");
-const cadastrarEContarFaltas = require("./funcoes/cadastrarEContarFaltas");
-const exibeResultado = require("./funcoes/exibeResultado");
+const processarDados = require("./funcoes/processarDados");
 
-console.log("=============== Bem vindo ao controle de notas! ===============\n");
 
-const aluno = prompt("Informe o nome do aluno: ");
 
+const aluno = cadastrarAluno();
 cadastrarMaterias();
-const notas = cadastrarNotas(materias);
-const medias = calcularMedia(notas);
-const { faltas, reprovadoPorFaltas } = cadastrarEContarFaltas(materias);
+processarDados(materias);
 
-exibeResultado(medias, faltas);
+
+
 
 
