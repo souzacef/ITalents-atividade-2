@@ -1,7 +1,9 @@
+// Importa os módulos necessários
 const cadastrarAluno = require("./funcoes/cadastrarAluno");
 const { cadastrarMaterias, materias } = require("./funcoes/cadastrarMaterias");
 const processarDados = require("./funcoes/processarDados");
 
-const aluno = cadastrarAluno();
-cadastrarMaterias();
-processarDados(materias);
+// Executa as funções principais do programa
+const aluno = cadastrarAluno(); // Cadastra o aluno
+cadastrarMaterias(); // Cadastra as matérias
+processarDados(materias); // Processa as notas e faltas
