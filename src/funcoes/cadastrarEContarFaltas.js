@@ -5,7 +5,15 @@ function cadastrarEContarFaltas(materias) {
     let reprovadoPorFaltas = false;
 
     materias.forEach((materia) => {
-        const numeroDeFaltas = parseInt(+prompt(`Digite o número de faltas para ${materia}: `),10);
+        let numeroDeFaltas;
+        while (true) {
+            const entrada = prompt(`Digite o número de faltas para ${materia}: `);
+            if (/^\d+$/.test(entrada)) {
+                numeroDeFaltas = parseInt(entrada, 10);
+                break;
+            }
+            console.log("Entrada inválida. Por favor, insira um número inteiro positivo.");
+        }
         faltas[materia] = numeroDeFaltas;
 
         if (numeroDeFaltas > 5) {
@@ -13,8 +21,7 @@ function cadastrarEContarFaltas(materias) {
         }
     });
 
-    return {faltas, reprovadoPorFaltas};
+    return { faltas, reprovadoPorFaltas };
 }
-
 
 module.exports = cadastrarEContarFaltas;

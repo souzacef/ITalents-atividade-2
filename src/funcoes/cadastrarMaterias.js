@@ -3,15 +3,19 @@ const prompt = require("prompt-sync")();
 const materias = [];
 
 function inserirMateria() {
-    console.log();
-    materias.push(prompt("Qual matéria deseja adicionar? "));
+    const materia = prompt("Qual matéria deseja adicionar? ");
+    if (materia.trim() !== "") {
+        materias.push(materia);
+    } else {
+        console.log("Nome da matéria não pode ser vazio.");
+    }
     console.log();
 }
 
 function cadastrarMaterias() {
+    console.log("\n======== Cadastro de matérias ========\n");
     let continuarExecutando = true;
 
-    
     for (let i = 0; i < 3; i++) {
         inserirMateria();
     }
@@ -24,15 +28,14 @@ function cadastrarMaterias() {
 
         if (resposta == '1') {
             inserirMateria();
-        } else {
+        } else if (resposta == '2') {
             console.log("\nCadastro de matérias encerrado.");
             console.log("======== Próxima etapa ========\n");
             continuarExecutando = false;
+        } else {
+            console.log("Entrada inválida. Digite 1 para sim, 2 para não.");
         }
     }
 }
 
-module.exports = {
-    cadastrarMaterias,
-    materias
-};
+module.exports = { cadastrarMaterias, materias };

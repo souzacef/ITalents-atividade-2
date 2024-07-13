@@ -6,10 +6,9 @@ const exibeResultado = require("./exibeResultado");
 function processarDados(materias) {
     const notas = cadastrarNotas(materias);
     const medias = calcularMedia(notas);
-    const { faltas, reprovadoPorFaltas } =
-     cadastrarEContarFaltas(materias);
-
-    exibeResultado(medias, faltas,);
+    const { faltas, reprovadoPorFaltas } = cadastrarEContarFaltas(materias);
+    
+    exibeResultado(medias, faltas);
 }
 
 module.exports = processarDados;
