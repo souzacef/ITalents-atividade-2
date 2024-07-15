@@ -55,6 +55,7 @@ O código abaixo contém toda a lógica da aplicação, incluindo o cadastro de 
 const prompt = require("prompt-sync")();
 
 // Função para cadastrar o nome do aluno
+
 function cadastrarAluno() {
     console.log("=============== Bem vindo ao controle de notas! ===============\n");
     const aluno = prompt("Informe o nome do aluno: ");
@@ -62,6 +63,7 @@ function cadastrarAluno() {
 }
 
 // Função para cadastrar matérias
+
 const materias = [];
 function inserirMateria() {
     const materia = prompt("Insira a matéria: ");
@@ -100,6 +102,7 @@ function cadastrarMaterias() {
 }
 
 // Função para cadastrar notas das matérias
+
 function cadastrarNotas(materias) {
     const notas = {};
 
@@ -130,6 +133,7 @@ function cadastrarNotas(materias) {
 }
 
 // Função para calcular a média das notas
+
 function calcularMedia(notas) {
     const medias = {};
 
@@ -142,6 +146,7 @@ function calcularMedia(notas) {
 }
 
 // Função para cadastrar e contar faltas
+
 function cadastrarEContarFaltas(materias) {
     const faltas = {};
     let reprovadoPorFaltas = false;
@@ -167,6 +172,7 @@ function cadastrarEContarFaltas(materias) {
 }
 
 // Função para exibir os resultados
+
 function exibeResultado(medias, faltas) {
     console.log("\n===== Resultados das matérias: =====\n");
 
@@ -189,6 +195,7 @@ function exibeResultado(medias, faltas) {
 }
 
 // Função principal para processar os dados
+
 function processarDados(materias) {
     const notas = cadastrarNotas(materias);
     const medias = calcularMedia(notas);
@@ -198,6 +205,7 @@ function processarDados(materias) {
 }
 
 // Execução da aplicação
+
 const aluno = cadastrarAluno();
 cadastrarMaterias();
 processarDados(materias);
