@@ -1,4 +1,5 @@
 Sistema de Gestão de Notas e Médias de Alunos
+
 Descrição
 
 Este projeto é uma aplicação em JavaScript utilizando Node.js que permite a gestão de notas e médias dos alunos. A aplicação permite cadastrar o nome do aluno, matérias, notas das matérias, calcular a média individual e contabilizar as faltas.
